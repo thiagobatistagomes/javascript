@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificando Países</title>
+    <style>
+        body{
+            font: normal 25pt Arial;
+        }
+
+        p{
+            font: normal 18 pt Arial;
+        }
+
+        div{
+            padding-left: 10pt;
+            margin-top: 20pt;
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificação Simples!</h1>
+    Vivendo em: <input title ="caixadetexto "type="text" name="nomepais" id="nomepais">
+    <input type="button" value="Verificar"  onclick = "verpais()">
+    <div id = res>
+
+    </div>
+    <script>
+        function verpais(){
+            let nomedopais = window.document.getElementById('nomepais')
+            let pais = nomedopais.value
+            let resultado = window.document.getElementById('res')
+            resultado.innerHTML = `Você vive no país ${pais} !`
+            if(pais == 'Brasil'){
+                resultado.innerHTML += '<p>Você é <strong>Brasileiro</strong>!</p>'
+            } else{
+                resultado.innerHTML += '<p>Você é <strong>Estrangeiro!</strong></p>'
+            }
+        }
+    </script>
+</body>
+</html>
